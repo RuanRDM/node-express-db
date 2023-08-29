@@ -16,7 +16,6 @@
         "codigo": 2,
         "nome": "Categoria 2"
     }
-    // ... outras categorias
 ]
 ```
 
