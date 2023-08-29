@@ -41,7 +41,7 @@
 
 ### Atualizar Categoria
 
-**Rota:** `PUT /categorias/:codigo`
+**Rota:** `PUT /categorias`
 **Descrição:** Atualiza uma categoria existente no banco de dados.
 **Parâmetros da Requisição:**
 
