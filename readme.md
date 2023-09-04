@@ -1,5 +1,4 @@
 # Documentação da API
-------
 # CATEGORIAS
 - ### Obter Todas as Categorias
 
@@ -103,8 +102,6 @@
     "nome": "Categoria 1"
 }
 ```
-------
-#
 #
 # PRODUTOS 
 
