@@ -2,7 +2,7 @@
 
 ### Obter Todas as Categorias
 
-**Rota:** `GET /categorias`
+**Rota:** `GET /categoria`
 **Descrição:** Recupera uma lista de todas as categorias do banco de dados, ordenadas por nome.
 **Resposta:**
 
@@ -21,7 +21,7 @@
 
 ### Adicionar Categoria
 
-**Rota:** `POST /categorias`
+**Rota:** `POST /categoria`
 **Descrição:** Adiciona uma nova categoria ao banco de dados.
 **Corpo da Requisição:**
 
@@ -41,7 +41,7 @@
 
 ### Atualizar Categoria
 
-**Rota:** `PUT /categorias`
+**Rota:** `PUT /categoria`
 **Descrição:** Atualiza uma categoria existente no banco de dados.
 **Parâmetros da Requisição:**
 
@@ -68,7 +68,7 @@
 
 ### Excluir Categoria
 
-**Rota:** `DELETE /categorias/:codigo`
+**Rota:** `DELETE /categoria/:codigo`
 **Descrição:** Exclui uma categoria do banco de dados.
 **Parâmetros da Requisição:**
 
@@ -86,7 +86,7 @@
 
 ### Obter Categoria por Código
 
-**Rota:** `GET /categorias/:codigo`
+**Rota:** `GET /categoria/:codigo`
 **Descrição:** Recupera uma categoria do banco de dados com base em seu código.
 **Parâmetros da Requisição:**
 
