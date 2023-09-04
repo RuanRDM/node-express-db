@@ -1,6 +1,7 @@
-## Documentação da API
-
-### Obter Todas as Categorias
+# Documentação da API
+------
+# CATEGORIAS
+- ### Obter Todas as Categorias
 
 **Rota:** `GET /categoria`
 **Descrição:** Recupera uma lista de todas as categorias do banco de dados, ordenadas por nome.
@@ -19,7 +20,7 @@
 ]
 ```
 
-### Adicionar Categoria
+- ### Adicionar Categoria
 
 **Rota:** `POST /categoria`
 **Descrição:** Adiciona uma nova categoria ao banco de dados.
@@ -39,7 +40,7 @@
 }
 ```
 
-### Atualizar Categoria
+- ### Atualizar Categoria
 
 **Rota:** `PUT /categoria`
 **Descrição:** Atualiza uma categoria existente no banco de dados.
@@ -66,7 +67,7 @@
 }
 ```
 
-### Excluir Categoria
+- ### Excluir Categoria
 
 **Rota:** `DELETE /categoria/:codigo`
 **Descrição:** Exclui uma categoria do banco de dados.
@@ -84,7 +85,7 @@
 }
 ```
 
-### Obter Categoria por Código
+- ### Obter Categoria por Código
 
 **Rota:** `GET /categoria/:codigo`
 **Descrição:** Recupera uma categoria do banco de dados com base em seu código.
@@ -102,8 +103,12 @@
     "nome": "Categoria 1"
 }
 ```
+------
+#
+#
+# PRODUTOS 
 
-### Obter Todos os Produtos
+- ### Obter Todos os Produtos
 
 **Rota:** `GET /produto`
 **Descrição:** Recupera uma lista de todos os produtos do banco de dados, incluindo informações da categoria a que pertencem.
@@ -135,7 +140,7 @@
     }
 ]
 ```
-## Adicionar Produto
+- ### Adicionar Produto
 
 **Rota:** `POST /produto`
 **Descrição:** Adiciona um novo produto ao banco de dados.
@@ -149,8 +154,8 @@
     "valor": 39.99,
     "categoria": 1
 }
+```
 **Resposta:**
-
 ```json
 {
     "codigo": 3,
@@ -165,7 +170,7 @@
 }
 ```
 
-### Atualizar Produto
+- ### Atualizar Produto
 
 **Rota:** `PUT /produto`
 **Descrição:** Atualiza um produto existente no banco de dados.
@@ -204,13 +209,13 @@
 }
 ```
 
-### Excluir Produto
+- ### Excluir Produto
 
 **Rota:** `DELETE /produto/:codigo`
 
 **Descrição:** Exclui um produto do banco de dados.
 
-#### Parâmetros da Requisição:
+**Parâmetros da Requisição:**
 
 | Parâmetro | Tipo | Descrição         |
 |-----------|------|-------------------|
@@ -224,13 +229,13 @@
 }
 ```
 
-### Obter Produto por Código
+- ### Obter Produto por Código
 
 **Rota:** `GET /produto/:codigo`
 
 **Descrição:** Recupera um produto do banco de dados com base em seu código.
 
-#### Parâmetros da Requisição:
+**Parâmetros da Requisição:**
 
 | Parâmetro | Tipo | Descrição         |
 |-----------|------|-------------------|
@@ -251,3 +256,4 @@
     "categoria_nome": "Categoria 1"
 }
 ```
+------
