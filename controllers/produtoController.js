@@ -56,3 +56,4 @@ const getProdutoPorCodigo= async (request, response) => {
 module.exports = {
    getProdutos, addProduto, updateProduto, deleteProduto, getProdutoPorCodigo
 }
+

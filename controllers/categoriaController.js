@@ -1,12 +1,17 @@
-const { getCategoriasDB, addCategoriaDB, updateCategoriaDB, deleteCategoriaDB, getCategoriaPorCodigoDB } = require('../usecases/categoriaUseCases')
+const { getCategoriasDB, addCategoriaDB, 
+    updateCategoriaDB, deleteCategoriaDB, getCategoriaPorCodigoDB } 
+    = require('../usecases/categoriaUseCases')
 
 const getCategorias = async (request, response) => {
+    // capturando o usuario que foi enviado pelo next do verificaJWT
+    console.log('Usuario no getCategorias' + 
+    JSON.stringify(request.usuario));
     await getCategoriasDB()
-        .then(data => response.status(200).json(data))
-        .catch(err => response.status(400).json({
-            status: 'error',
-            message: 'Erro ao consultar as categorias: ' + err
-        }));
+          .then(data => response.status(200).json(data))
+          .catch(err => response.status(400).json({
+            status : 'error',
+            message : 'Erro ao consultar as categorias: ' + err
+          }))
 }
 
 const addCategoria = async (request, response) => {

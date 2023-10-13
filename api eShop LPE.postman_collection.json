@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "9c55d593-97a0-418e-b29e-6e910c2ff49b",
+		"name": "api eShop LPE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10292792"
+	},
+	"item": [
+		{
+			"name": "get categorias",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImVtYWlsIjoiam9yZ2ViYXZhcmVzY29AaWZzdWwuZWR1LmJyIiwibm9tZSI6IkpvcmdlIEJhdmFyZXNjbyIsInRpcG8iOiJBIiwidGVsZWZvbmUiOiIoNTQpOTk5ODQtNDM0OCIsInJvbGVzIjpbIkFERENBVEVHT1JJQSIsIlJFTU9WRUNBVEVHT1JJQSJdfSwiaWF0IjoxNjk2MzM0MzU3LCJleHAiOjE2OTYzMzQ2NTd9.4uTLUTeplXDl-_XGzuwyeMX3QVMYaX9SrEzWz-mP35k",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3002/categoria",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add Categorria",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImVtYWlsIjoiam9yZ2ViYXZhcmVzY29AaWZzdWwuZWR1LmJyIiwibm9tZSI6IkpvcmdlIEJhdmFyZXNjbyIsInRpcG8iOiJBIiwidGVsZWZvbmUiOiIoNTQpOTk5ODQtNDM0OCJ9LCJpYXQiOjE2OTYzMzM5NjMsImV4cCI6MTY5NjMzNDI2M30.I--9N-USDT13EMqJFUmjDTUoODpLbsK9DJlR-wdd20M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\" : \"Informática\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/categoria",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria"
+					],
+					"query": [
+						{
+							"key": "authorization",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualiza categoria",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"codigo\": 7,\n        \"nome\": \"Informática teste\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/categoria",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categoria por código",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/categoria/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete categoria",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/categoria/6",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Produtos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/produto",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"produto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add produto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"codigo\": 1,\n        \"nome\": \"Mouse USB\",\n        \"descricao\": \"Mouse USB\",\n        \"quantidade_estoque\": 20,\n        \"ativo\": true,\n        \"valor\": \"60.00\",\n        \"data_cadastro\": \"2023-08-29\",\n        \"categoria\": 1\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/produto",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"produto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update produto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"codigo\": 4,\n        \"nome\": \"Mouse USB\",\n        \"descricao\": \"Mouse USB\",\n        \"quantidade_estoque\": 20,\n        \"ativo\": true,\n        \"valor\": \"60.00\",\n        \"data_cadastro\": \"2023-08-29\",\n        \"categoria\": 1\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/produto",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"produto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get produto por código",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/produto/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"produto",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete produto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/produto/4",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"produto",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"email\" : \"jorgebavaresco@ifsul.edu.br\", \"senha\" : \"123456\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
