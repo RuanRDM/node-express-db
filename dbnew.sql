@@ -1,14 +1,14 @@
 -- Tabela Editoras
 CREATE TABLE editoras (
     codigo SERIAL not null PRIMARY KEY,
-    nome_editora VARCHAR(255) NOT NULL
+    nome VARCHAR(40) NOT NULL
 );
 
 -- Tabela Livros
 CREATE TABLE livros (
     codigo SERIAL not null PRIMARY KEY,
-    titulo VARCHAR(255) NOT NULL,
-    autor VARCHAR(255),
+    titulo VARCHAR(40) NOT NULL,
+    autor VARCHAR(40),
     preco DECIMAL(10, 2),  -- Coluna para preço em formato decimal
     descricao TEXT,        -- Coluna para descrição em formato de texto
     editora INT,
@@ -16,7 +16,7 @@ CREATE TABLE livros (
 );
 
 -- Inserir algumas editoras de exemplo
-INSERT INTO editoras (nome_editora) VALUES
+INSERT INTO editoras (nome) VALUES
     ('Editora A'),
     ('Editora B'),
     ('Editora C');
