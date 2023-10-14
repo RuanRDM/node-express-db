@@ -44,6 +44,9 @@ values ('Mouse USB','Mouse USB', 20, true, 60.0, current_date,1),
 insert into avaliacoes (autor, email, texto, nota, data, produto) 
 values  ('Jorge', 'jorgebavaresco@ifsul.edu.br','Mouse muito preciso', 5, current_date, 1);
 
+insert into usuarios (email, senha, tipo, telefone, nome) 
+values ('ruan', '123456', 'A','(54)99984-4348','Ruan Delatorre');
+
 create table usuarios (
 	email varchar(50) not null primary key, 
 	senha varchar(20) not null, 
