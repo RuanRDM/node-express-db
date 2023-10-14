@@ -3,8 +3,8 @@ const Editora = require('../entities/editora');
 
 const getEditorasDB = async () => {
     try {
-        const { rows } = await pool.query(`SELECT * FROM editoras ORDER BY nome_editora`);
-        return rows.map((editora) => new Editora(editora.codigo, editora.nome_editora));
+        const { rows } = await pool.query(`SELECT * FROM editoras ORDER BY nome`);
+        return rows.map((editora) => new Editora(editora.codigo, editora.nome));
     } catch (err){
         throw "Erro: " + err;
     }
@@ -12,13 +12,13 @@ const getEditorasDB = async () => {
 
 const addEditoraDB = async (body) => {
     try {   
-        const { nome_editora } = body; 
-        const results = await pool.query(`INSERT INTO editoras (nome_editora) 
+        const { nome } = body; 
+        const results = await pool.query(`INSERT INTO editoras (nome) 
             VALUES ($1)
-            returning codigo, nome_editora`,
-        [nome_editora]);
+            returning codigo, nome`,
+        [nome]);
         const editora = results.rows[0];
-        return new Editora(editora.codigo, editora.nome_editora); 
+        return new Editora(editora.codigo, editora.nome); 
     } catch (err) {
         throw "Erro ao inserir a editora: " + err;
     }    
@@ -27,15 +27,15 @@ const addEditoraDB = async (body) => {
 
 const updateEditoraDB = async (body) => {
     try {   
-        const { codigo, nome_editora }  = body; 
-        const results = await pool.query(`UPDATE editoras set nome_editora = $2 where codigo = $1 
-        returning codigo, nome_editora`,
-        [codigo, nome_editora]);        
+        const { codigo, nome }  = body; 
+        const results = await pool.query(`UPDATE editoras set nome = $2 where codigo = $1 
+        returning codigo, nome`,
+        [codigo, nome]);        
         if (results.rowCount == 0){
             throw `Nenhum registro encontrado com o código ${codigo} para ser alterado`;
         }
         const editora = results.rows[0];
-        return new Editora(editora.codigo, editora.nome_editora); 
+        return new Editora(editora.codigo, editora.nome); 
     } catch (err) {
         throw "Erro ao alterar a editora: " + err;
     }      
@@ -63,7 +63,7 @@ const getEditoraPorCodigoDB = async (codigo) => {
             throw "Nenhum registro encontrado com o código: " + codigo;
         } else {
             const editora = results.rows[0];
-            return new Editora(editora.codigo, editora.nome_editora); 
+            return new Editora(editora.codigo, editora.nome); 
         }       
     } catch (err) {
         throw "Erro ao recuperar a editora: " + err;

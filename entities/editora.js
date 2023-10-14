@@ -1,7 +1,7 @@
 class Editora {
-    constructor(codigo, nome_editora){
+    constructor(codigo, nome){
         this.codigo = codigo;
-        this.nome_editora = nome_editora;
+        this.nome = nome;
     }
 }
 
