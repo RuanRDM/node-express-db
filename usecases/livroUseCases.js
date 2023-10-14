@@ -20,7 +20,7 @@ const addLivroDB = async (body) => {
         const { titulo, autor, preco, descricao, editora } = body; 
         const results = await pool.query(`INSERT INTO livros (titulo, autor, preco, descricao, editora) 
             VALUES ($1, $2, $3, $4, $5)
-            returning codigo, nome, titulo, autor, preco, descricao, editora`,
+            returning codigo, titulo, autor, preco, descricao, editora`,
         [titulo, autor, preco, descricao, editora]);
         const livro = results.rows[0];
         return new Livro(livro.codigo, livro.titulo, livro.autor, livro.preco, 
